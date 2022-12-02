@@ -23,11 +23,15 @@ public class App {
         for (int i = 0; i < quantityOfFullNames; i++) {
             Persona randomPerson = new Persona(randomNamesList.get(i), randomLasnamesList.get(i));
             randomPeople.add(randomPerson);
-            System.out.println(randomPeople.get(i).getNombre() + " " + randomPeople.get(i).getApellido());
+            // System.out.println(randomPeople.get(i).getNombre() + " " +
+            // randomPeople.get(i).getApellido());
         }
 
         /// Imprimir utilizando diferentes criterios basados en los metodos de
         /// PeopleSorter
-        // PeopleSorter sorter = new PeopleSorter(randomPeople);
+        PeopleSorter sorter = new PeopleSorter(randomPeople);
+        sorter.sortByNameAndPrint();
+        sorter.sortByLastnameAndPrint();
+        sorter.inverseSortByLastnameAndPrint();
     }
 }
